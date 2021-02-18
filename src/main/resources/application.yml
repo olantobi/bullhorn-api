@@ -1,5 +1,5 @@
 bullhorn:
-  url: http://auth.bullhornstaffing.com
+  url: https://auth.bullhornstaffing.com
   client-id: abcd
   client-secret: efgh
 server:

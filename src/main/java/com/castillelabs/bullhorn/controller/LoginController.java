@@ -18,7 +18,7 @@ public class LoginController {
     private final LoginService loginService;
 
     @PostMapping("/login")
-    public void getAuthorizationCode(@RequestBody @Valid Login login) {
+    public void getAuthorizationCode(final @Valid @RequestBody Login login) {
         loginService.requestAuthorizationCode(login);
     }
 }
