@@ -18,7 +18,8 @@ public class AuthController {
     private final DataStore dataStore;
 
     @RequestMapping("/redirect-url")
-    public ResponseEntity<?> redirectUrl(@RequestParam("code") String authorizationCode, @RequestParam("state") String state) {
+    public ResponseEntity<?> redirectUrl(@RequestParam(name = "code", required = false, defaultValue = "") String authorizationCode,
+                                         @RequestParam(name = "state", required = false, defaultValue = "") String state) {
         log.info("Authorization code {}, state {}", authorizationCode, state);
         Map<String, AuthParam> mapStore = dataStore.getMapStore();
 

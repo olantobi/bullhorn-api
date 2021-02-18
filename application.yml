@@ -2,5 +2,3 @@ bullhorn:
   url: https://auth.bullhornstaffing.com
   client-id: abcd
   client-secret: efgh
-server:
-  port: 9001
