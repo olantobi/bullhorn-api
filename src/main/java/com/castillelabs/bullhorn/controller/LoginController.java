@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
@@ -16,7 +18,7 @@ public class LoginController {
     private final LoginService loginService;
 
     @PostMapping("/login")
-    public void getAuthorizationCode(@RequestBody Login login) {
+    public void getAuthorizationCode(@RequestBody @Valid Login login) {
         loginService.requestAuthorizationCode(login);
     }
 }
