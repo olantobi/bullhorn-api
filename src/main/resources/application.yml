@@ -1,0 +1,4 @@
+bullhorn:
+  url: http://auth.bullhornstaffing.com
+  client-id: abcd
+  client-secret: efgh
